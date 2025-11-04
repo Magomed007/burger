@@ -1,2 +1,2 @@
-# Magomed007.github.io
+# burger
 Project #1
