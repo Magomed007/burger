@@ -2,10 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1600, initial-scale=1.0">
     <title>Vintage Food</title>
     <link rel="stylesheet" href="style.css">
-    <script src="scale.js"></script>
+    <script>
+        (function() {
+            const physicalWidth = window.screen.width;
+            const siteWidth = 1440;
+            let scale = physicalWidth / siteWidth;
+            if (scale < 0.25) scale = 0.25;
+            if (scale > 1) scale = 1;
+            const viewport = document.createElement('meta');
+            viewport.name = 'viewport';
+            viewport.content = `width=${siteWidth}, initial-scale=${scale}, user-scalable=yes`;
+            document.head.appendChild(viewport);
+        })();
+    </script>
 </head>
 <body>
     <header class="page_header">
@@ -79,7 +90,6 @@
                 </li>
             </ul>
         </section>
-
     </main>
 
     <footer class="page_footer">
@@ -117,7 +127,5 @@
             </li>
         </ul>
     </footer>
-
-
 </body>
 </html>
