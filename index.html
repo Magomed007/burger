@@ -5,17 +5,24 @@
     <title>Vintage Food</title>
     <link rel="stylesheet" href="style.css">
     <script>
-        (function() {
-            const physicalWidth = window.screen.width;
-            const siteWidth = 1600;
-            let scale = physicalWidth / siteWidth;
-            if (scale < 0.25) scale = 0.25;
-            if (scale > 1) scale = 1;
-            const viewport = document.createElement('meta');
-            viewport.name = 'viewport';
-            viewport.content = `width=${siteWidth}, initial-scale=${scale}, user-scalable=yes`;
-            document.head.appendChild(viewport);
-        })();
+    (function() {
+        const physicalWidth = window.screen.width;
+        const siteWidth = 1600;
+        let scale = physicalWidth / siteWidth;
+        if (scale < 0.25) scale = 0.25;
+        if (scale > 1) scale = 1;
+        
+        const viewport = document.createElement('meta');
+        viewport.name = 'viewport';
+        viewport.content = `width=${siteWidth}, initial-scale=${scale}, user-scalable=yes`;
+        document.head.appendChild(viewport);
+        
+        setTimeout(() => {
+            document.body.style.overflowX = 'hidden';
+            document.documentElement.style.overflowX = 'hidden';
+            window.scrollTo(0, 0);
+        }, 100);
+    })();
     </script>
 </head>
 <body>
@@ -129,3 +136,4 @@
     </footer>
 </body>
 </html>
+
