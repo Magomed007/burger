@@ -284,3 +284,28 @@ body {
         justify-content: space-around;
     }
 }
+
+html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    position: relative;
+}
+
+body {
+    transform: translateX(0) !important;
+}
+
+/* Жесткий фикс для всех контейнеров */
+.page_header,
+.page_main, 
+.page_footer,
+.navigation,
+.container_page_header,
+.container_catalog {
+    max-width: 1600px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    left: 0 !important;
+    right: 0 !important;
+}
