@@ -7,7 +7,7 @@ html {
     height: 100%;
     font-size: 35px;
     box-sizing: border-box;
-    overflow-x: hidden;
+    overflow-x: auto;
 }
 
 body {
@@ -18,7 +18,7 @@ body {
     line-height: 43px;
     color: #000000;
     background: #FFFFFF;
-    overflow-x: hidden;
+    overflow-x: auto;
 }
 
 .page_header {
@@ -214,3 +214,4 @@ body {
 .footer_images {
     display: block;
 }
+
