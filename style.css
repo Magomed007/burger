@@ -249,10 +249,38 @@ body {
     display: block;
 }
 
-/* Фикс для мобильного скролла */
 @media (max-width: 1600px) {
     body {
         width: 100vw;
+        min-width: 100vw;
         overflow-x: hidden;
+        position: relative;
+    }
+    
+    .page_header,
+    .page_main,
+    .page_footer {
+        width: 100vw;
+        min-width: 100vw;
+        max-width: 100vw;
+        left: 0;
+        right: 0;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Убираем лишние отступы на мобильных */
+    .navigation {
+        padding-right: 20px;
+        justify-content: space-between;
+    }
+    
+    .navigation_list {
+        margin-left: 50px;
+    }
+    
+    .container_page_header {
+        padding-left: 20px;
+        justify-content: space-around;
     }
 }
