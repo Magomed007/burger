@@ -9,7 +9,6 @@
             const physicalWidth = window.screen.width;
             const siteWidth = 1600;
             let scale = physicalWidth / siteWidth;
-            if (scale < 0.25) scale = 0.25;
             if (scale > 1) scale = 1;
             const viewport = document.createElement('meta');
             viewport.name = 'viewport';
@@ -129,3 +128,4 @@
     </footer>
 </body>
 </html>
+
