@@ -13,17 +13,25 @@ html {
 body {
     max-width: 1600px;
     margin: 0 auto;
+    width: 100%;
     flex-direction: column;
     font-weight: 500;
     line-height: 43px;
     color: #000000;
     background: #FFFFFF;
     overflow-x: hidden;
+    position: relative;
 }
 
 .page_header {
     height: 900px;
     background-image: linear-gradient(180deg, rgba(237, 164, 24, 1) 47.4%, rgba(237, 164, 24, 0) 100%);
+    margin: 0 auto;
+    max-width: 1600px;
+    width: 100%;
+    position: relative;
+    left: 0;
+    right: 0;
 }
 
 .navigation {
@@ -33,6 +41,9 @@ body {
     height: 70px;
     padding-top: 105px;
     padding-right: 65px;
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .logo {
@@ -74,6 +85,10 @@ body {
     padding-top: 25px;
     gap: 20px;
     padding-left: 30px;
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
+    justify-content: center;
 }
 
 .text_header_list {
@@ -118,12 +133,21 @@ body {
 .page_main {
     height: 900px;
     text-align: center;
+    margin: 0 auto;
+    max-width: 1600px;
+    width: 100%;
+    position: relative;
+    left: 0;
+    right: 0;
 }
 
 .container_catalog {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .catalog_title {
@@ -144,6 +168,8 @@ body {
     padding: 0;
     gap: 40px 30px;
     list-style: none;
+    max-width: 1600px;
+    width: 100%;
 }
 
 .catalog_item {
@@ -164,6 +190,12 @@ body {
     height: 450px;
     text-align: center;
     background-image: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, rgba(237, 166, 29, 1) 100%);
+    margin: 0 auto;
+    max-width: 1600px;
+    width: 100%;
+    position: relative;
+    left: 0;
+    right: 0;
 }
 
 .footer_list {
@@ -178,6 +210,8 @@ body {
     line-height: 25px;
     justify-content: center;
     list-style: none;
+    max-width: 1600px;
+    width: 100%;
 }
 
 .footer_title {
@@ -215,3 +249,10 @@ body {
     display: block;
 }
 
+/* Фикс для мобильного скролла */
+@media (max-width: 1600px) {
+    body {
+        width: 100vw;
+        overflow-x: hidden;
+    }
+}
